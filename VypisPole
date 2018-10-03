@@ -8,7 +8,7 @@ public static void main(String[] args) {
  
 for (int i = 0; i < pole.length; i++){
     Scanner sc = new Scanner(System.in);
-        System.out.println("Zadej číslo od -50 do 150");
+        System.out.println("Zadej číslo od -50 do 15uzuznnzunzunzunnnnnnnnnnnnnn0");
             cislo = sc.nextInt();
      
 while (cislo < -50 || cislo > 150) {
