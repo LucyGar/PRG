@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Trideni {
+
+public static void main(String[] args) {
+ int[] pole = new int[10];
+ int cislo;
+ 
+for (int i = 0; i < pole.length; i++){
+    Scanner sc = new Scanner(System.in);
+        System.out.println("Zadej číslo od -50 do 150");
+            cislo = sc.nextInt();
+     
+while (cislo < -50 || cislo > 150) {
+    System.out.println("Zadejte číslo v rozpětí -50 až 150");
+        cislo = sc.nextInt();   
+    }
+
+    pole[i] = cislo;   
+    }
+    int[] pole2 = trideni(pole);
+        for(int i:pole2){
+            System.out.print(i);
+            System.out.print(", ");
+    }
+    }
+
+    public static int[] trideni(int[] pole1){
+         
+        for (int i = 0; i < pole1.length - 1; i++) {
+            int cislo = i;
+                for (int j = i + 1; j < pole1.length; j++)
+                    if (pole1[j] < pole1[cislo]) 
+                        cislo = j;
+      
+            int mensiCislo = pole1[cislo];  
+                pole1[cislo] = pole1[i];
+                    pole1[i] = mensiCislo;
+        }
+        
+        return pole1;
+    }
+     
+         
+        
+      
+}
