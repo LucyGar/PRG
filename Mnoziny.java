@@ -1,6 +1,6 @@
-package Mnoziny; 
-import static Mnoziny.mnozinyTest.generujMnozinu1;
-import static Mnoziny.mnozinyTest.generujMnozinu2;
+package mnoziny; 
+import static mnoziny.mnozinyTest.generujMnozinu1;
+import static mnoziny.mnozinyTest.generujMnozinu2;
 public class Mnoziny { 
 
   
