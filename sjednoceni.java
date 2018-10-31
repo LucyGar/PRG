@@ -1,5 +1,5 @@
 
-package mnoziny;
+package Mnoziny;
 
 public class sjednoceni {
 
@@ -34,23 +34,24 @@ public class sjednoceni {
         } 
        }
        System.out.println("Pocet dvojic je " + pocetDvoj);
-       System.out.println("Pocet cisel je " + slouceni.length);
+        
        
         int[] sjednoceni = new int[slouceni.length - pocetDvoj];
-     
-       int p = 0;
-        for (int i = 0; i == slouceni.length; i++){  
-        if (i == slouceni.length - 1) {
-            sjednoceni[p] = slouceni[i + 1];
-            i++;
-        }
-        else if (slouceni[i] != slouceni[i + 1]) { 
-                sjednoceni[p] = slouceni[i];
-                p++;
-           }
+      
+        
+        for (int i = 0; i < slouceni.length + 1; i++){  
+            
+                if (slouceni[i] != slouceni[i + 1]) { 
+                sjednoceni[i] = slouceni[i];
+                }
+                
+                else {
+                   sjednoceni[i] = 55;
                 }
    
-                
+                }
+        
+ 
         System.out.println("--------");
        for (int i = 0; i < slouceni.length; i++) {
            System.out.println(slouceni[i]);
