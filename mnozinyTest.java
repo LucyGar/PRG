@@ -2,6 +2,7 @@ package mnoziny;
 
   
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner; 
 
@@ -17,27 +18,40 @@ public class mnozinyTest {
 
         System.out.println("Zadejte počet čísel v množině v rozmezí od 10 do 20:"); 
 
-        int i = sc.nextInt(); 
+        int p = sc.nextInt(); 
 
-        while ( i < 10 || i > 20 ) { 
+        while ( p < 10 || p > 20 ) { 
 
             System.out.println("Zadejte prosím číslo v daném rozmezí:"); 
 
-            i = sc.nextInt(); 
+            p = sc.nextInt(); 
 
         } 
 
-        int[] mnozina1 = new int[i]; 
+        int[] mnozina1 = new int[p]; 
 
          
 
-        for (int p = 0; p < mnozina1.length; p++) { 
+        for (int i = 0; i < mnozina1.length; i++) { 
 
-            mnozina1[p] =  rand.nextInt(31) + -20;
-            System.out.println(mnozina1[p]);
+            mnozina1[i] =  rand.nextInt(31) + -20;    
 
-        } 
-        return mnozina1;
+        }
+        for (int i = 0; i < mnozina1.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < mnozina1.length; j++)
+                if (mnozina1[j] < mnozina1[index]) 
+                    index = j;
+      
+            int mensiCislo = mnozina1[index];  
+            mnozina1[index] = mnozina1[i];
+            mnozina1[i] = mensiCislo;
+        }
+     
+           System.out.println(Arrays.toString(mnozina1));
+        
+        return mnozina1; 
         
 
     } 
@@ -48,26 +62,39 @@ public class mnozinyTest {
 
         System.out.println("Zadejte počet čísel v množině v rozmezí od 10 do 20:"); 
 
-        int i = sc.nextInt(); 
+        int p = sc.nextInt(); 
 
-        while ( i < 10 || i > 20 ) { 
+        while ( p < 10 || p > 20 ) { 
 
             System.out.println("Zadejte prosím číslo v daném rozmezí:"); 
 
-            i = sc.nextInt(); 
+            p = sc.nextInt(); 
 
         } 
 
-        int[] mnozina2 = new int[i]; 
+        int[] mnozina2 = new int[p]; 
 
          
 
-        for (int p = 0; p < mnozina2.length; p++) { 
+        for (int i = 0; i < mnozina2.length; i++) { 
 
-            mnozina2[p] =  rand.nextInt(31) + -20;
-            System.out.println(mnozina2[p]);
+            mnozina2[i] =  rand.nextInt(31) + -20;
 
         } 
+        for (int i = 0; i < mnozina2.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < mnozina2.length; j++)
+                if (mnozina2[j] < mnozina2[index]) 
+                    index = j;
+      
+            int mensiCislo = mnozina2[index];  
+            mnozina2[index] = mnozina2[i];
+            mnozina2[i] = mensiCislo;
+        }
+       
+            System.out.println(Arrays.toString(mnozina2));
+       
         return mnozina2;
      
 

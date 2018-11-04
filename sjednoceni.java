@@ -1,9 +1,11 @@
 
 package mnoziny;
 
+import java.util.Arrays;
+
 public class sjednoceni {
 
-   public void sjednot(int[] gen1, int[] gen2) {
+   public void sjednoceni(int[] gen1, int[] gen2) {
        
    int[] slouceni = new int[gen1.length + gen2.length];
        for (int i = 0; i < gen1.length; i++) {
@@ -32,9 +34,7 @@ public class sjednoceni {
                 if (slouceni[i] == slouceni[i + 1]) {
                  pocetDvoj++;   
         } 
-       }
-       System.out.println("Pocet dvojic je " + pocetDvoj);
-        
+       }     
        
         int[] sjednoceni = new int[slouceni.length - pocetDvoj];
       
@@ -50,21 +50,12 @@ public class sjednoceni {
                     i++;
          }
          
-        }
- 
-        System.out.println("--------");
-       for (int i = 0; i < slouceni.length; i++) {
-           System.out.println(slouceni[i]);
-       }
-   
-       
+        }   
         
-       System.out.println("--------");
-       for (int i = 0; i < sjednoceni.length; i++) {
-           
-           System.out.println(sjednoceni[i]);
-       
-   }
+       System.out.println("-------- Sjednoceni AB");
+       System.out.println(Arrays.toString(sjednoceni));
+    
+      
         } 
 }
 
