@@ -1,5 +1,5 @@
 
-package mnoziny;
+package Mnoziny;
 
 import java.util.Arrays;
 
@@ -13,8 +13,7 @@ public class Rozdil {
                  pocetDvoj++;   
         } 
        }       
-      int[] roz1 = new int[gen1.length - pocetDvoj];
-      
+      int[] roz1 = new int[gen1.length - pocetDvoj];      
         
          int p = 0;
         for (int i = 0; i < gen1.length - 1; i++){  
@@ -38,7 +37,6 @@ public class Rozdil {
        
       int[] roz2 = new int[gen2.length - pocetDvoj];
       
-        
          p = 0;
         for (int i = 0; i < gen2.length - 1; i++){  
          if (gen2[i] != gen2[i + 1]) { 
@@ -78,8 +76,7 @@ public class Rozdil {
                  pocetDvoj++;   
         } 
        }
-
-        
+  
         int[] stejne = new int[pocetDvoj];
         p = 0;
         for (int i = 0; i < slouceni.length - 1; i++){  
@@ -124,10 +121,11 @@ public class Rozdil {
             ulozit = true;  
         }
          }
-          System.out.println("-------- Rozdil A z B");
+          System.out.println("Rozdil A z B");
+          System.out.println("▼");
         System.out.println(Arrays.toString(rozdilA));
-        
-        
+        System.out.println("▲");
+                
         p = 0;
         poradi = 0;
         por = 0;
@@ -162,8 +160,11 @@ public class Rozdil {
             poradi = 0;
             ulozit = true;  
         }
-         System.out.println("-------- Rozdil B z A");
+             System.out.println("");
+         System.out.println("Rozdil B z A");
+             System.out.println("▼");
             System.out.println(Arrays.toString(rozdilB));
+             System.out.println("▲");
          }
 }
 }

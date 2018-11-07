@@ -1,5 +1,5 @@
 
-package mnoziny;
+package Mnoziny;
 
 import java.util.Arrays;
 
@@ -27,7 +27,6 @@ public class sjednoceni {
             slouceni[i] = mensiCislo;
         }
       
-       
       int pocetDvoj = 0;
        for (int i = 0; i < slouceni.length - 1; i++){
            
@@ -37,7 +36,6 @@ public class sjednoceni {
        }     
        
         int[] sjednoceni = new int[slouceni.length - pocetDvoj];
-      
         
          int p = 0;
         for (int i = 0; i < slouceni.length - 1; i++){  
@@ -48,18 +46,13 @@ public class sjednoceni {
          if (i == slouceni.length - 2) {
             sjednoceni[p] = slouceni[i+1];
                     i++;
-         }
-         
+         }   
         }   
         
-       System.out.println("-------- Sjednoceni AB");
+       System.out.println("Sjednoceni AB");
+       System.out.println("▼");
        System.out.println(Arrays.toString(sjednoceni));
+       System.out.println("▲");
     
-      
         } 
 }
-
-
-
-
-

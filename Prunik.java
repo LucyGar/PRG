@@ -1,5 +1,5 @@
 
-package mnoziny;
+package Mnoziny;
 
 import java.util.Arrays;
 
@@ -26,7 +26,6 @@ class Prunik {
             slouceni[i] = mensiCislo;
         }
       
-       
       int pocetDvoj = 0;
        for (int i = 0; i < slouceni.length - 1; i++){
            
@@ -35,7 +34,6 @@ class Prunik {
         } 
        }
         
-       
         int[] prunik1 = new int[pocetDvoj];
         
          int p = 0;
@@ -56,7 +54,6 @@ class Prunik {
                  i++;
        }
        }
-
          int[] prunik = new int[pocetDv];
          p = 0;
         for (int i = 0; i < prunik1.length - 1; i++){  
@@ -70,9 +67,10 @@ class Prunik {
             }
         }
  
-       System.out.println("--------Prunik AB");
+       System.out.println("Prunik AB");
+       System.out.println("▼");
        System.out.println(Arrays.toString(prunik));
+       System.out.println("▲");
    
-  
 }
 }

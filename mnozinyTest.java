@@ -1,4 +1,4 @@
-package mnoziny; 
+package Mnoziny; 
 
   
 
@@ -16,7 +16,7 @@ public class mnozinyTest {
 
      Scanner sc = new Scanner(System.in); 
 
-        System.out.println("Zadejte počet čísel v množině v rozmezí od 10 do 20:"); 
+        System.out.println("Zadejte počet čísel v první množině v rozmezí od 10 do 20:"); 
 
         int p = sc.nextInt(); 
 
@@ -25,16 +25,13 @@ public class mnozinyTest {
             System.out.println("Zadejte prosím číslo v daném rozmezí:"); 
 
             p = sc.nextInt(); 
-
         } 
 
         int[] mnozina1 = new int[p]; 
 
-         
-
         for (int i = 0; i < mnozina1.length; i++) { 
 
-            mnozina1[i] =  rand.nextInt(31) + -20;    
+            mnozina1[i] =  rand.nextInt(21) + -30;    
 
         }
         for (int i = 0; i < mnozina1.length - 1; i++)
@@ -49,18 +46,17 @@ public class mnozinyTest {
             mnozina1[i] = mensiCislo;
         }
      
-           System.out.println(Arrays.toString(mnozina1));
+           System.out.println("A = " + Arrays.toString(mnozina1));
         
         return mnozina1; 
         
-
     } 
     
     public static int[] generujMnozinu2() { 
 
     Scanner sc = new Scanner(System.in); 
 
-        System.out.println("Zadejte počet čísel v množině v rozmezí od 10 do 20:"); 
+        System.out.println("Zadejte počet čísel v druhé množině v rozmezí od 10 do 20:"); 
 
         int p = sc.nextInt(); 
 
@@ -73,8 +69,6 @@ public class mnozinyTest {
         } 
 
         int[] mnozina2 = new int[p]; 
-
-         
 
         for (int i = 0; i < mnozina2.length; i++) { 
 
@@ -93,13 +87,8 @@ public class mnozinyTest {
             mnozina2[i] = mensiCislo;
         }
        
-            System.out.println(Arrays.toString(mnozina2));
+            System.out.println("B = " + Arrays.toString(mnozina2));
        
         return mnozina2;
-     
-
-} 
-  
+     } 
 }
-
- 
